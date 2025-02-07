@@ -13,7 +13,7 @@ library(furrr)
 library(ldatuning)
 
 #Открываем файл
-edits <- read_csv("C:/Users/Алексей/Desktop/Text analysis/Editorials-about-Russia-2024.csv")
+edits <- read_csv(".../Editorials-about-Russia-2024.csv")
 
 edits <- edits |> 
   drop_na()
