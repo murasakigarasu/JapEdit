@@ -62,8 +62,8 @@ def nearest_word(word, embeddings, index, reverse_index, topn=20):
     closest_indices = np.argsort(distances)[1:topn+1]  # Exclude the word itself
     return [reverse_index[i] for i in closest_indices]
 
-print(nearest_word("россия", word_embeddings, word_index, reverse_word_index))
-print(nearest_word("москва", word_embeddings, word_index, reverse_word_index))
+print(nearest_word("ロシア", word_embeddings, word_index, reverse_word_index))
+print(nearest_word("モスクワ", word_embeddings, word_index, reverse_word_index))
 
 # UMAP визуализация
 umap_data = umap.UMAP(n_neighbors=3, min_dist=0.3, random_state=0).fit_transform(lsa_space)
